@@ -1,11 +1,26 @@
-import renderImage from './render-img.js';
-import htmlToDOM from './utils/html-to-DOM.js';
 import images from '../data/images.js';
+import FilterImage from './FilterImages.js';
+import ImageList from './ImageList.js';
+import ImageItem from './ImageItem.js';
+import Component from './Component.js';
 
-const placement = document.getElementById('cards');
+class App extends Component {
 
-images.forEach(image => {
-    const html = renderImage(image);
-    const dom = htmlToDOM(html);
-    placement.appendChild(dom);
-});
+    const filterImagesProps = {
+        images: images,
+        onFilter: (imageHorns) => {
+            let filteredImages;
+            if(imageHorns === 'all') {
+                filteredImages = images;
+            }
+            else {
+            filteredImages = images.filter(image => {
+                return image.horns = imageHorns;
+            });
+            }
+
+            const updateProps = { images: filteredImages };
+            ImageList.update(updateProps);
+        }
+    }
+};
