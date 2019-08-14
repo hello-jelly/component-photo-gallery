@@ -24,8 +24,8 @@ class FilterImages extends Component {
 function getUniqueTypes(images) {
     const types = [];
     images.forEach(image => {
-        if(!types.includes(image.horns)) {
-            types.push(image.horns);
+        if(!types.includes(image.keyword)) {
+            types.push(image.keyword);
         }
     });
 
@@ -35,7 +35,7 @@ function getUniqueTypes(images) {
 
 function renderOptionsHTML(types) {
     const optionsArray = types.map(type => {
-        return /*html*/`<option value="${type}">Horns: ${type}</option>`;
+        return /*html*/`<option value="${type}">${type}</option>`;
     });
 
     return optionsArray.join('');
