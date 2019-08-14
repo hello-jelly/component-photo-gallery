@@ -10,6 +10,6 @@ class FilterImages extends Component {
         });
 
     }
-    
-
 }
+
+export default FilterImages;

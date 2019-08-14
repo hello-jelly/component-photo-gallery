@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Photo Gallery</title>
-    <link rel="stylesheet" href="src/reset.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./src/reset.css">
+    <link rel="stylesheet" href="./src/style.css">
     <link href="https://fonts.googleapis.com/css?family=Asul|Kavivanar&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -15,24 +15,25 @@
         <h1>The Horny Friends Gallery</h1>
     </header>
 
-    <Main>
+    <main>
         <section class="search-bar">
             <select>
+                <option selected value="view-all">View All</option>
                 <option value="one-horn">1 Horn</option>
                 <option value="two-horn">2 Horns</option>
                 <option value="three-horn">3 Horns</option>
                 <option value="one-hundred-horn">100 Horns</option>
             </select>
-            <button class="button">SORT</button>
         </section>
 
+        <section class="cards-container">
         <ul class="cards" id="cards"></ul>
-        
-    </Main>
+        </section>
 
-    <footer>
+        <footer>
+        </footer>
+    </main>
 
-    </footer>
-    <script src="./src/app.js" type="module"></script>
+    <script src="./src/index.js" type="module"></script>
 </body>
 </html>

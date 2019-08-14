@@ -18,7 +18,7 @@ header {
     justify-content: flex-start;
     align-items: center;
     font-size: 2em;
-    background-image: url('assets/background-img.png');
+    background-image: url('../assets/background-img.png');
 }
 
 h1 {
