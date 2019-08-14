@@ -22,7 +22,7 @@ class App extends Component {
         const listSelection = dom.querySelector('.cards-container');
 
         listSelection.appendChild(imageListDOM);
-
+        
         const filterImagesProps = {
             images: images,
             onFilter: (imageHorns) => {
@@ -32,19 +32,19 @@ class App extends Component {
                 }
                 else {
                     filteredImages = images.filter(image => {
-                        return image.horns = imageHorns;
+                        return image.horns === imageHorns;
                     });
                 }
-
+                
                 const updateProps = { images: filteredImages };
-                ImageList.update(updateProps);
+                imageList.update(updateProps);
             }
         };
 
         const filterImages = new FilterImage(filterImagesProps);
         const filterImagesDOM = filterImages.renderDOM();
-        const optionSelection = dom.querySelector('.search-bar');
-        optionSelection.appendChild(filterImagesDOM);
+        const optionSection = dom.querySelector('.search-bar');
+        optionSection.appendChild(filterImagesDOM);
     }
 
     renderHTML() {
