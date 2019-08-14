@@ -32,7 +32,7 @@ class App extends Component {
                 }
                 else {
                     filteredImages = images.filter(image => {
-                        return image.horns === imageHorns;
+                        return image.keyword === imageHorns;
                     });
                 }
                 
