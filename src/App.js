@@ -3,6 +3,7 @@ import FilterImage from './FilterImages.js';
 import ImageList from './ImageList.js';
 import Component from './Component.js';
 import Header from './Header.js';
+// import SortImages from './SortImages.js';
 
 class App extends Component {
 

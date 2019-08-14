@@ -4,7 +4,6 @@ import Component from './Component.js';
 class FilterImages extends Component {
     renderHTML() {
 
-
         return /*html*/ `
         <select><option selected value="view-all">View All</option>
                 <option value="one-horn">1 Horn</option>
