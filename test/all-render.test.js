@@ -1,6 +1,7 @@
 import ImageItem from '../src/ImageItem.js';
 import FilterImages from '../src/FilterImages.js';
 import images from '../src/data/images.js';
+import Header from '../src/Header.js';
 
 const test = QUnit.test;
 
@@ -49,6 +50,23 @@ test('renders html from data', assert => {
     const props = { images: images };
     const filterImages = new FilterImages(props);
     const html = filterImages.renderHTML();
+    
+    // assert
+    assert.htmlEqual(html, expected);
+});
+
+test('renders header', assert => {
+    // arrange
+    const expected = /*html*/`
+    <header>
+        <img class="logo" src="./assets/logo-img.png" alt="horny logo, it's a pun">
+        <h1>The Horny Friends Gallery</h1>
+    </header>
+    `;
+    // act
+    const props = { images: images };
+    const header = new Header(props);
+    const html = header.renderHTML();
     
     // assert
     assert.htmlEqual(html, expected);
