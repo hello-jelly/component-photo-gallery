@@ -39,11 +39,7 @@ test('render an img', assert => {
 test('renders html from data', assert => {
     // arrange
     const expected = /*html*/`
-    <select><option selected value="view-all">View All</option>
-        <option value="one-horn">1 Horn</option>
-        <option value="two-horn">2 Horns</option>
-        <option value="three-horn">3 Horns</option>
-        <option value="one-hundred-horn">100 Horns</option></select>
+    <select class="search-bar"><option selected value="view-all">View All</option><option value="1">Horns: 1</option><option value="100">Horns: 100</option><option value="2">Horns: 2</option><option value="3">Horns: 3</option></select>
     `;
     // act
     const props = { images: images };
